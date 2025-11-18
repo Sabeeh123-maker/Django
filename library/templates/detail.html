@@ -1,0 +1,37 @@
+{%extends 'base.html'%}
+{% block content%}
+<h1 class="text-center">Details page</h1>
+<div class="mx-auto 3 w-50 text-center">
+    <h2>Book Details</h2>
+    <table class="table table-bordered border border-light">
+        <tr>
+        <th>Title</th>
+        <td>{{book.title}}</td>
+            </tr>
+        <tr>
+        <th>Author</th>
+        <td>{{book.author}}</td>
+            </tr>
+        <tr>
+        <th>Price</th>
+        <td>{{book.price}}</td>
+            </tr>
+        <tr>
+        <th>Pages</th>
+        <td>{{book.pages}}</td>
+            </tr>
+        <tr>
+        <th>Language</th>
+        <td>{{book.language}}</td>
+        </tr>
+        <th>Image</th>
+        <td><img src="{{book.image.url}}" height="100px" width="100px"></td>
+        </tr>
+    </table>
+
+<!--{{book.author}}-->
+<!--{{book.price}}-->
+<!--{{book.pages}}-->
+<!--{{book.language}}-->
+    </div>
+{%endblock%}

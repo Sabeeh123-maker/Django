@@ -1,0 +1,68 @@
+{%extends 'base.html' %}
+{%block content%}
+<h1 class="text-center">Home Page</h1>
+<h4 class="text-center text-warning my-5">Movie list</h4>
+<!--<table class="table table-bordered">-->
+<!--    <tr>-->
+<!--        <th>Title</th>-->
+<!--        <th>director</th>-->
+<!--        <th>Year</th>-->
+<!--        <th>Language</th>-->
+<!--        <th>Image</th>-->
+<!--        <th>Description</th>-->
+<!--    </tr>-->
+<!--    {% for i in m %}-->
+<!--    <tr>-->
+<!--        <td>{{i.title}}</td>-->
+<!--        <td>{{i.director}}</td>-->
+<!--        <td>{{i.year}}</td>-->
+<!--        <td>{{i.language}}</td>-->
+<!--        <td><img src="{{i.image.url}}" height="100px" width="100px"></td>-->
+<!--        <td>{{i.description}}</td>-->
+<!--    </tr>-->
+<!--    {% endfor %}-->
+
+<!--</table>-->
+
+<!--list format-->
+
+<!--<ol>-->
+<!--    {% for i in m%}-->
+<!--    <li>Movie Details</li>-->
+<!--    <ul>-->
+<!--        <li>Title: {{i.title}}</li>-->
+<!--        <li>Director: {{i.director}}</li>-->
+<!--        <li>Image: <img src="{{i.image.url}}" height="100px" width="100px"></li>-->
+<!--        <li>Language: {{i.language}}</li>-->
+<!--        <li>Year: {{i.year}}</li>-->
+<!--        <li>Description: {{i.description}}</li>-->
+<!--    </ul>-->
+<!--    {% endfor%}-->
+<!--</ol>-->
+
+<!--card format-->
+<div>
+<div class="row container">
+{% for i in m%}
+    <div class="col-4">
+<div class="card" style="width: 18rem;">
+  <img src="{{i.image.url}}" class="card-img-top" height="200px" width="100px" alt="...">
+  <div class="card-body">
+    <h5 class="card-title"> Title: <b>{{i.title}}</b></h5>
+    <p class="card-text">Year:{{i.year}}</p>
+      <a class="btn btn-danger" href="{% url 'detail' i.id%}">Detail</a>
+      <a class="btn btn-danger" href="{% url 'edit' i.id%}">Edit</a>
+      <a class="btn btn-danger" href="{% url 'delete' i.id%}">Delete</a>
+  </div>
+    </div>
+</div>
+
+{% endfor%}
+    </div>
+    </div>
+{%endblock%}
+{%block button%}
+ <form class="d-flex">
+        <a href="{% url 'addmovie' %}" class="btn btn-outline-primary">Add movie</a>
+    </form>
+{%endblock%}

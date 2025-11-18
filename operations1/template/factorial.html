@@ -1,0 +1,22 @@
+{% extends 'base.html'%}
+{%block contents%}
+{% load crispy_forms_tags %}
+<div class="border border-light mt-5 w-50 p-5 mx-auto">
+<h1 class="text-center ">Factorial</h1>
+   <form method="post">
+        {% csrf_token%}
+        {{form|crispy}}
+    <div>
+        <input type="submit" class="btn btn-outline-light">
+
+    </div>
+        </form>
+        {%if result%}
+        <div>
+        <label class="form-label" >Result:</label>
+        <input class="form-control w-25" type="text" value="{{result}}" aria-label="Disabled input example" disabled readonly>
+            </div>
+
+        {%endif%}
+</div>
+{%endblock%}

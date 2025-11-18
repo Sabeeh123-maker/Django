@@ -1,0 +1,112 @@
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: auto;
+      overflow: auto;
+      scroll-behavior: smooth;
+    }
+
+    .content {
+      position: relative;
+      z-index: 1;
+      color: white;
+      text-align: left;
+      padding-top: 20%;
+      font-family: sans-serif;
+      height: 100vh;
+    }
+    .gradient-btn {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 12px;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  background: linear-gradient(to right, #008080, #00bfff); /* Teal to light blue */
+  transition: background 0.3s ease;
+  background: linear-gradient(to right, #00bfff, #add8e6);
+}
+.gradient-section {
+  padding: 60px;
+  color: white;
+  text-align: center;
+  font-family: sans-serif;
+  background: linear-gradient(to right, #008080, #00bfff); /* Teal to light blue */
+  border-radius-top: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+.wake-btn {
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.wake-btn:hover {
+  transform: scale(1.05); /* Slight zoom */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Glow effect */
+}
+.hero-section {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.video-scroll {
+  width: 100%;
+  height: 600px;
+  object-fit:cover;
+}
+
+.hero-content {
+  position: absolute;
+  top: 50%;
+  left: 20%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  z-index: 1;
+}
+.shadow-box {
+  padding: 20px;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* X, Y, blur, color */
+}
+.gradient-text {
+  font-size: 2.5rem;
+  font-weight: bold;
+  background: linear-gradient(to right, #459fdb,#0324fc, #8a2be2); /* Dark blue to light blue */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.button2{
+    height: 130px;
+    width: 230px;
+    border-radius: 12px;
+    text-align: left;
+}
+.span{
+    font-weight: lighter;
+    font-size: 15px;
+    color:grey
+}
+
+.snap-section {
+  height: 50vh;
+  scroll-snap-align: start;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+}
+.slide-up {
+  opacity: 0;
+  transform: translateY(100px); /* Start below */
+  transition: opacity 0.4s ease, transform 0.8s ease;
+}
+
+.slide-up.visible {
+  opacity: 1;
+  transform: translateY(0); /* Slide up into place */
+}

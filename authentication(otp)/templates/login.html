@@ -1,0 +1,21 @@
+{% extends 'base.html'%}
+{% block contents%}
+{% load crispy_forms_tags%}
+<div class="mx-auto border border-light w-25 mt-5 p-5">
+<h1 class="text-center">Login page</h1>
+    <form method="post">
+        {% csrf_token%}
+    {{form|crispy}}
+        <div class="text-center mt-5">
+       <input type="submit" class="btn btn-outline-light">
+   </div>
+    </form>
+    {% if messages %}
+<ul class="messages mt-5">
+    {% for message in messages %}
+    <li type="none" class="text-danger">{{ message }}</li>
+    {% endfor %}
+</ul>
+{% endif %}
+</div>
+{% endblock%}

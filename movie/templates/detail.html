@@ -1,0 +1,22 @@
+{%extends 'base.html' %}
+{% block content%}
+<h1 class="text-center">Detail page</h1>
+<div class="container mt-5">
+  <div class="card mb-3" style="max-width: 540px;">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img src="{{i.image.url}}" class="img-fluid rounded-start" alt="..." height="500px" width="150px">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h3 class="card-title fw-5">{{i.title}}</h3>
+        <span><b>Director:</b>{{i.director}}</span>
+        <span><b>Language:</b>{{i.language}}</span><br>
+        <span class="card-text"><b>Year:</b>{{i.year}}</span><br>
+        <span class="card-text"><small class="text-muted"></small><b>About:</b>{{i.description}}</span>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+{% endblock%}

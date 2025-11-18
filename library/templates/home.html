@@ -1,0 +1,14 @@
+{%extends 'base.html'%}
+{% block content%}
+<div class="border border-3 border-light w-50 mx-auto">
+<h1 class="text-center mt-3">Home page</h1>
+<h1 class="my-3 text-center text-warning">Welcome to the Home page</h1>
+    <div class="text-center">
+    {% if user.is_authenticated%}
+    <h1>{{user.first_name}}</h1>
+    {% else%}
+    <h2>Guest</h2>
+    {% endif %}
+        </div>
+</div>
+{%endblock%}

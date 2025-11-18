@@ -1,0 +1,13 @@
+{% extends 'base.html'%}
+{% block contents%}
+<div class="mx-auto border border-light w-25 mt-5 p-5">
+  <form method="POST">
+    {% csrf_token%}
+    <div class="p-3">
+      <input type="text" placeholder="Enter OTP Here" name="o" class="form-control mb-5">
+      <input type="submit" class="btn btn-outline-light">
+    </div>
+  </form>
+
+</div>
+{% endblock%}
